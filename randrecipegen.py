@@ -17,10 +17,10 @@ actions = ['add','bake','batter','beat','bind','blacken','blanch','blend','boil'
 randwords = [" ", " ", " ", " ", " ", "the", "cat ", "dog ", "banana ", "purple ", "apple ", "picachu ", "wrong ",
 "can ", "family ", "data ", "knife ", "trick ", "script "]
 count = input('Enter recipe count: ')
-if(len(count) > 0):
+if(count > 0):
     try:
         count=int(count)
-    except ValueError:
+    except (ValueError, TypeError):
         print('Invalid number entered, going with default of 10')
         count=10;
 if not os.path.exists("recipeGibberized"):
